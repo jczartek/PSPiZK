@@ -1,0 +1,15 @@
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\bin\Debug\ColorWPF.exe.config
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\bin\Debug\ColorWPF.exe
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\bin\Debug\ColorWPF.pdb
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.csprojAssemblyReference.cache
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\App.g.cs
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF_MarkupCompile.cache
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF_MarkupCompile.lref
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\MainWindow.baml
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.g.resources
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.Properties.Resources.resources
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.csproj.GenerateResource.cache
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.csproj.CoreCompileInputs.cache
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.exe
+C:\Users\Heraklit\source\repos\ColorWPF\ColorWPF\obj\Debug\ColorWPF.pdb

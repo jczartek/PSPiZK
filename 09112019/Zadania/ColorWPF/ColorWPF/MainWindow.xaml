@@ -1,0 +1,19 @@
+﻿<Window x:Class="ColorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColorWPF"
+        mc:Ignorable="d"
+        Title="Color Window" Height="450" Width="800"
+        KeyDown="Window_KeyDown"
+        Closed="Window_Closed">
+    <Grid>
+        <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" Margin="10,10,10,97" Stroke="Black"/>
+        <Slider x:Name="silderR" Margin="10,0,10,68" Height="24" VerticalAlignment="Bottom" ValueChanged="SilderR_ValueChanged" Maximum="255"/>
+        <Slider x:Name="silderG" Margin="10,0,10,39" Height="24" VerticalAlignment="Bottom" ValueChanged="SilderR_ValueChanged" Maximum="255"/>
+        <Slider x:Name="silderB" Margin="10,0,10,10" Height="24" VerticalAlignment="Bottom" ValueChanged="SilderR_ValueChanged" Maximum="255"/>
+
+
+    </Grid>
+</Window>
