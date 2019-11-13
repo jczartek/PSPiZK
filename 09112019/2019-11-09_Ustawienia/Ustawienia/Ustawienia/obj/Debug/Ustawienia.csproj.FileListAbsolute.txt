@@ -1,0 +1,15 @@
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\bin\Debug\Ustawienia.exe.config
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\bin\Debug\Ustawienia.exe
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\bin\Debug\Ustawienia.pdb
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.csprojAssemblyReference.cache
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\MainWindow.g.cs
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\App.g.cs
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia_MarkupCompile.cache
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia_MarkupCompile.lref
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\MainWindow.baml
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.g.resources
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.Properties.Resources.resources
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.csproj.GenerateResource.cache
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.csproj.CoreCompileInputs.cache
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.exe
+C:\Users\pk\source\repos\Ustawienia\Ustawienia\obj\Debug\Ustawienia.pdb

@@ -1,0 +1,15 @@
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\bin\Debug\PierwszaAplikacja.exe.config
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\bin\Debug\PierwszaAplikacja.exe
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\bin\Debug\PierwszaAplikacja.pdb
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.csprojAssemblyReference.cache
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\MainWindow.g.cs
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\App.g.cs
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja_MarkupCompile.cache
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja_MarkupCompile.lref
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\MainWindow.baml
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.g.resources
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.Properties.Resources.resources
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.csproj.GenerateResource.cache
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.csproj.CoreCompileInputs.cache
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.exe
+C:\Users\pk\source\repos\PierwszaAplikacja\PierwszaAplikacja\obj\Debug\PierwszaAplikacja.pdb

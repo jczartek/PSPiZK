@@ -1,0 +1,13 @@
+W domu: 
+
+9 listopada 2019
+----------------
+
+1. Napisać jeszcze raz samodzielnie aplikację 'Kolory'
+2. W aplikacji Slider/ProgressBar zmienić funkcję ustalającą kolor paska w taki sposób, żeby dla wartości środkowej kolor był żółty (użycie instrukcji if).
+3. W aplikacji Slider/ProgressBar zapisać położenie suwaka w ustawieniach i odtwarzać je po ponownym uruchomieniu aplikacji
+4. Analogicznie w aplikacji TextBox/TextBlock zapisać wpisany tekst
+5. Przygotować aplikację, która pozwala na wprowadzanie tekstu do kontrolki TextBox. W oknie powinien być również pasek postępu (ProgressBar), który ma własność Maximum ustawioną na 20 i zapełnia się w miarę wpisywania kolejnych liter (wartość Value równa jest liczbie liter).
+6. Przygotować aplikację, która pozwala na wpisanie trzech współczynników równania kwadratowego (kontrolki TextBox). Kliknięcie przycisku powinno wyświetlić (kontrolki TextBlock) rozwiązania (dwie liczby). Kontrolki ułożyć w siatce (layout Grid) z trzema kolumnami i trzema wierszami (zob. zdjęcie).
+http://fizyka.umk.pl/~jacek/dydaktyka/spdypl_net/wpf/6_projekt_okna.jpg
+Uwaga! Do zmiany łańcucha wpisanego do kontrolek TextBox na liczby typu rzeczywistego użyć metody double.Parse.

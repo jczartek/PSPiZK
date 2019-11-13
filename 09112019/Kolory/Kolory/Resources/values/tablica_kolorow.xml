@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string-array name="kolory">
+    <item>Detrmined by seek bars</item>
+    <item>Black</item>
+    <item>White</item>
+    <item>Red</item>
+    <item>Green</item>
+    <item>Blue</item>
+    <item>Cyan</item>
+    <item>Magenta</item>
+    <item>Yellow</item>
+    <item>Gray</item>
+  </string-array>
+</resources>

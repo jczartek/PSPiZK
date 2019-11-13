@@ -1,0 +1,15 @@
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\bin\Debug\DrugaAplikacja.exe.config
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\bin\Debug\DrugaAplikacja.exe
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\bin\Debug\DrugaAplikacja.pdb
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.csprojAssemblyReference.cache
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\MainWindow.g.cs
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\App.g.cs
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja_MarkupCompile.cache
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja_MarkupCompile.lref
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\MainWindow.baml
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.g.resources
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.Properties.Resources.resources
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.csproj.GenerateResource.cache
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.csproj.CoreCompileInputs.cache
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.exe
+C:\Users\pk\source\repos\DrugaAplikacja\DrugaAplikacja\obj\Debug\DrugaAplikacja.pdb

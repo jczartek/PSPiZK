@@ -1,0 +1,17 @@
+﻿<Window x:Class="Colours.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Colours"
+        mc:Ignorable="d"
+        Title="Colours" Height="450" Width="800" Closed="Window_Closed" >
+    <StackPanel>
+        <Rectangle Name="Rectangle" Fill="Black"
+           Margin="10" Height="200"/>
+        <Slider Name="slR" Maximum="255" Margin="10" Height="20" Value="0" ValueChanged="Slider_ValueChanged"/>
+        <Slider Name="slG" Maximum="255" Margin="10" Height="20" Value="0" ValueChanged="Slider_ValueChanged"/>
+        <Slider Name="slB" Maximum="255" Margin="10" Height="20" Value="0" ValueChanged="Slider_ValueChanged"/>
+        <TextBox Name="tbHexKolor" Height="50" FontSize="35" />
+    </StackPanel>
+</Window>

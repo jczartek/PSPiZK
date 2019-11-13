@@ -1,0 +1,15 @@
+C:\Users\pk\source\repos\Colours\Colours\bin\Debug\Colours.exe.config
+C:\Users\pk\source\repos\Colours\Colours\bin\Debug\Colours.exe
+C:\Users\pk\source\repos\Colours\Colours\bin\Debug\Colours.pdb
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.csprojAssemblyReference.cache
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\MainWindow.g.cs
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\App.g.cs
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours_MarkupCompile.cache
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours_MarkupCompile.lref
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\MainWindow.baml
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.g.resources
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.Properties.Resources.resources
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.csproj.GenerateResource.cache
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.csproj.CoreCompileInputs.cache
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.exe
+C:\Users\pk\source\repos\Colours\Colours\obj\Debug\Colours.pdb

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string-array name="kolory">
+    <item>Wskazany przez suwaki</item>
+    <item>Czarny</item>
+    <item>Biały</item>
+    <item>Czerwony</item>
+    <item>Zielony</item>
+    <item>Niebieski</item>
+    <item>Turkusowy</item>
+    <item>Purpurowy</item>
+    <item>Żółty</item>
+    <item>Szary</item>
+  </string-array>
+</resources>
