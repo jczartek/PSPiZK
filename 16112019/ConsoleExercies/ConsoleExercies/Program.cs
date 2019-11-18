@@ -13,6 +13,7 @@ namespace ConsoleExercies
             //RownanieKwadratowe();
             //PodajImie();
             //DzienTygodnia();
+            //Kalkulator();
             Console.ReadKey();
         }
 
@@ -83,6 +84,66 @@ namespace ConsoleExercies
             }
 
             Console.WriteLine($"Numer dnia: {numerDnia}  to dzień tygodnia: {dzienTygodnia} ");
+        }
+
+        static void Kalkulator()
+        {
+            Console.WriteLine("Witaj w Kalkulatorze!");
+
+            while(true)
+            {
+                Console.Write("Wybierz dostępne operacje (+, -, *, /, ^, %, exit): ");
+                string op = Console.ReadLine().Trim();
+
+                if (op == "exit") break;
+
+                Console.Write("Podaj liczbę a: ");
+                double a = double.Parse(Console.ReadLine());
+
+                Console.Write("Podaj liczbę b: ");
+                double b = double.Parse(Console.ReadLine());
+
+                double result;
+
+                switch(op)
+                {
+                    case "+":
+                        result = a + b;
+                        break;
+                    case "-":
+                        result = a - b;
+                        break;
+                    case "*":
+                        result = a * b;
+                        break;
+                    case "/":
+                        if (b == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("Dzielenie przez 0!");
+                            Console.ResetColor();
+                            continue;
+                        }
+                        result = a / b;
+                        break;
+                    case "^":
+                        result = Math.Pow(a, b);
+                        break;
+                    case "%":
+                        result = a % b;
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine($"Niedozwolona operacja: {op}!");
+                        Console.ResetColor();
+                        continue;
+                }
+
+                Console.Clear();
+                Console.WriteLine($"Wynik: {result}");
+            }
+
+            Console.WriteLine("Żegnaj!");
         }
     }
 }
