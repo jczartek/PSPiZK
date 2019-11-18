@@ -1,0 +1,19 @@
+W domu: 
+
+16 listopada 2019
+-----------------
+
+Uwaga do projektu 'Przeciagnij i upuść':
+Ustawienie e.Effects w metodach związanych ze zdarzeniami DragEnter i DragOver wymaga polecenia e.Handled = true i steruje kształtem kursora widocznego w trakcie przenoszenia elementu.
+Wartość zwracana przez metodę DragDrop.DoDragDrop jest natomiast ustawiana w metodzie związanej ze zdarzeniem Drop.
+Poprawiony kod jest w pliku 2019-11-16_PrzeciagnijIUpusc_POPRWAWIONY.zip
+
+1. Zmienić projekt aplikacji 'Równania kwadratowe' tak, aby zamiast dziedziny rzeczywistej użyć liczb zespolonych.
+   Wymaga to dodania odwołania do biblioteki System.Numerics.dll, a także deklaracji użycia przestrzeni nazw System.Numerics.
+2. Przygotować aplikację w polem edycji (TextBox) i przyciskiem (Button). Nad polem edycji powinna znajdować się etykieta (TextLabel) z napisem "Wpisz imię".
+   Wpisane imię należy pokazać w oknie dialogowym (MessageBox.Show). Jeżeli wprowadzony tekst zawiera spację lub liczby zgłosić wyjątek.
+3. Napisać aplikację, która pozwoli na wpisanie dwóch liczb i wyświetli wynik podzielenia ich przez siebie. Uwzględnić możliwość wystąpiebua wyjątku,
+   jeżeli dzielnikiem będzie zero. Użyć do tego konstrukcji try..catch.
+4. Odtworzyć samodzielnie aplikację 'Przeciągnij i upuść' przygotowanš na zajęciach.
+5. W aplikacji 'Silnia' umieścić klasę odpowiedzialną za obliczanie silni w osobnej bibliotece DLL.
+6. Przygotować aplikację, która pozwoli dwóm graczom grać w 'Kółko i krzyżyk'. Aplikacja powinna wykrywać wygraną jednego z graczy. Projekt na 2-3 tygodnie. Do realizacji projektu można łączyć się w pary
