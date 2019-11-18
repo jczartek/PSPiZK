@@ -10,7 +10,8 @@ namespace ConsoleExercies
     {
         static void Main(string[] args)
         {
-            RownanieKwadratowe();
+            //RownanieKwadratowe();
+            PodajImie();
             Console.ReadKey();
         }
 
@@ -33,6 +34,16 @@ namespace ConsoleExercies
                 Console.WriteLine($"Równanie ma dwa rozwiązania x1: {-b - delta_sqrt / (2 * a) : 0.00}\t " +
                                                               $"x2: {-b + delta_sqrt / (2 * a) : 0.00}");
             }
+        }
+
+        static void PodajImie()
+        {
+            Console.Write("Podaj imię: ");
+            string name = Console.ReadLine().Trim();
+
+            if (String.IsNullOrEmpty(name)) return;
+
+            Console.WriteLine(name.EndsWith("a") ? $"Imię żeński: {name}" : $"Imię męskie: {name}");
         }
     }
 }
