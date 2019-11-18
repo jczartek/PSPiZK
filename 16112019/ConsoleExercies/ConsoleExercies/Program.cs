@@ -11,7 +11,8 @@ namespace ConsoleExercies
         static void Main(string[] args)
         {
             //RownanieKwadratowe();
-            PodajImie();
+            //PodajImie();
+            //DzienTygodnia();
             Console.ReadKey();
         }
 
@@ -44,6 +45,44 @@ namespace ConsoleExercies
             if (String.IsNullOrEmpty(name)) return;
 
             Console.WriteLine(name.EndsWith("a") ? $"Imię żeński: {name}" : $"Imię męskie: {name}");
+        }
+
+        static void DzienTygodnia()
+        {
+            Console.Write("Podaj numer dnia (1-7): ");
+            int numerDnia = Convert.ToInt32(Console.ReadLine());
+
+            string dzienTygodnia = null;
+
+            switch(numerDnia)
+            {
+                case 1:
+                    dzienTygodnia = "Poniedziałek";
+                    break;
+                case 2:
+                    dzienTygodnia = "Wtorek";
+                    break;
+                case 3:
+                    dzienTygodnia = "Środa";
+                    break;
+                case 4:
+                    dzienTygodnia = "Czwartek";
+                    break;
+                case 5:
+                    dzienTygodnia = "Piątek";
+                    break;
+                case 6:
+                    dzienTygodnia = "Sobota";
+                    break;
+                case 7:
+                    dzienTygodnia = "Niedziela";
+                    break;
+                default:
+                    Console.WriteLine($"Błąd: {numerDnia}");
+                    return;
+            }
+
+            Console.WriteLine($"Numer dnia: {numerDnia}  to dzień tygodnia: {dzienTygodnia} ");
         }
     }
 }
