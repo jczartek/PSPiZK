@@ -1,0 +1,38 @@
+﻿<Window x:Class="DragAndDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragAndDrop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0" 
+                 AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown"
+                 DragEnter="ListBox_DragEnter" Drop="ListBox_Drop">
+            <ListBoxItem>Kolumna 1 :: Pierwszy</ListBoxItem>
+            <ListBoxItem>Kolumna 1 :: Drugi</ListBoxItem>
+            <ListBoxItem>Kolumna 1 :: Trzeci</ListBoxItem>
+            <ListBoxItem>Kolumna 1 :: Czwarty</ListBoxItem>
+            <ListBoxItem>Kolumna 1 :: Piąty</ListBoxItem>
+        </ListBox>
+
+        <GridSplitter Width="10" Grid.Column="1" HorizontalAlignment="Stretch"/>
+
+        <ListBox Grid.Column="2" 
+                 AllowDrop="True" PreviewMouseLeftButtonDown="ListBox_PreviewMouseLeftButtonDown"
+                 DragEnter="ListBox_DragEnter" Drop="ListBox_Drop">
+            <ListBoxItem>Kolumna 2 :: Pierwszy</ListBoxItem>
+            <ListBoxItem>Kolumna 2 :: Drugi</ListBoxItem>
+            <ListBoxItem>Kolumna 2 :: Trzeci</ListBoxItem>
+            <ListBoxItem>Kolumna 2 :: Czwarty</ListBoxItem>
+            <ListBoxItem>Kolumna 2 :: Piąty</ListBoxItem>
+        </ListBox>
+    </Grid>
+</Window>
