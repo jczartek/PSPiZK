@@ -1,0 +1,7 @@
+﻿W domu: 
+
+23 listopada 2019
+-----------------
+
+1. W aplikacji Notatnik dodać obsługę poleceń Plik\Nowy (czyszczenie zawartości tbTekst po zapytaniu, jeżeli został wpisany jakiś tekst) oraz Plik\Zapisz (również z odpowiedniš logiką). Należy uwzględnić ich kombinacje klawiszy skrótu.
+2. Przygotować aplikację, która pozwoli na wczytanie rysunku (użycie okna dialogowego wyboru pliku), pokazanie go w kontrolce Image i wydruk (do klasy Drukowanie dodać metodę PrintImage).

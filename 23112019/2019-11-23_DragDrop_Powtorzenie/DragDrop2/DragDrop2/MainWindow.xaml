@@ -1,0 +1,19 @@
+﻿<Window x:Class="DragDrop2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragDrop2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ListBox Name="lbLewy" AllowDrop="True" Width="300" DockPanel.Dock="Left"
+                 PreviewMouseDown="ListBox_PreviewMouseDown">
+            <ListBoxItem>Jeden element</ListBoxItem>
+        </ListBox>
+        <ListBox Name="lbPrawy" AllowDrop="True"
+                 DragEnter="LbPrawy_DragEnter"
+                 DragOver="LbPrawy_DragOver"
+                 Drop="LbPrawy_Drop" />
+    </DockPanel>
+</Window>
