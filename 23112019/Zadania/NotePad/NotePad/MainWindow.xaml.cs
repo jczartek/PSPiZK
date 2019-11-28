@@ -24,6 +24,7 @@ namespace NotePad
     {
         const string filters = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
         bool isTextChanged = false;
+        string pathFile = null;
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
 
@@ -75,8 +76,9 @@ namespace NotePad
             {
                 string text = File.ReadAllText(openFileDialog.FileName);
                 textBuffer.Text = text;
+                pathFile = openFileDialog.FileName;
 
-                pathStatusItem.Content = "[ " + System.IO.Path.GetFileName(openFileDialog.FileName) + " ]";
+                pathStatusItem.Content = "[ " + System.IO.Path.GetFileName(pathFile) + " ]";
                 isTextChanged = false;
                 deleteAsterisk();
             }
@@ -151,15 +153,104 @@ namespace NotePad
                     FilterIndex = 1
                 };
 
-
                 if (saveFileDialog.ShowDialog() == true)
                 {
                     File.WriteAllText(saveFileDialog.FileName, textBuffer.Text);
-                    pathStatusItem.Content = System.IO.Path.GetFileName(saveFileDialog.FileName);
+                    pathFile = saveFileDialog.FileName;
+                    pathStatusItem.Content = System.IO.Path.GetFileName(pathFile);
                     isTextChanged = false;
                     deleteAsterisk();
                 }
             }
+        }
+
+        private void miSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (pathFile != null)
+            {
+                File.WriteAllText(pathFile, textBuffer.Text);
+                isTextChanged = false;
+                deleteAsterisk();
+            }
+            else miSaveAs_Click(null, null);
+        }
+
+        private void miNew_Click(object sender, RoutedEventArgs e)
+        {
+            if (pathFile != null || !String.IsNullOrEmpty(textBuffer.Text))
+            {
+                MessageBoxResult result = MessageBox.Show(this, 
+                    "Do you want save data?", Title, 
+                    MessageBoxButton.YesNoCancel, 
+                    MessageBoxImage.Question, 
+                    MessageBoxResult.Cancel);
+
+                switch(result)
+                {
+                    case MessageBoxResult.Yes:
+                        miSave_Click(null, null);
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                    default:
+                    case MessageBoxResult.Cancel:
+                        return;
+                }
+            }
+
+            pathFile = null;
+            textBuffer.Text = "";
+            isTextChanged = false;
+            deleteAsterisk();
+            pathStatusItem.Content = "[None]";
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete)
+                mi_Delete_Click(null, null);
+
+            if (e.Key == Key.F5)
+                mi_PasteDate_Click(null, null);
+
+            if ((e.KeyboardDevice.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                switch(e.Key)
+                {
+                    case Key.N:
+                        miNew_Click(null, null);
+                        break;
+                    case Key.O:
+                        miOpen_Click(null, null);
+                        break;
+                    case Key.S:
+                        miSaveAs_Click(null, null);
+                        break;
+                    case Key.P:
+                        mi_Print_Click(null, null);
+                        break;
+                    case Key.Z:
+                        miUndo_Click(null, null);
+                        break;
+                    case Key.X:
+                        miCut_Click(null, null);
+                        break;
+                    case Key.C:
+                        miCopy_Click(null, null);
+                        break;
+                    case Key.V:
+                        mi_Paste_Click(null, null);
+                        break;
+                    case Key.A:
+                        mi_SelectAll_Click(null, null);
+                        break;
+                }
+            }
+        }
+
+        private void mi_Print_Click(object sender, RoutedEventArgs e)
+        {
+            Printing.PrintText(textBuffer.Text);
         }
     }
 }
