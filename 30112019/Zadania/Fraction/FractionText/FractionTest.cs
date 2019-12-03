@@ -20,6 +20,9 @@ namespace FractionText
 
             f = new Fraction(0.7);
             Assert.AreEqual("7/10", f.ToString());
+
+            f = new Fraction("1/2");
+            Assert.AreEqual("1/2", f.ToString());
         }
 
         [TestMethod]
@@ -30,7 +33,8 @@ namespace FractionText
 
             Fraction f3 = f1 + f2;
 
-            Assert.AreEqual("4/4", f3.ToString());
+            Assert.AreEqual("1/1", f3.ToString());
+
         }
 
         [TestMethod]
@@ -41,7 +45,7 @@ namespace FractionText
 
             Fraction f3 = f1 - f2;
 
-            Assert.AreEqual("2/8", f3.ToString());
+            Assert.AreEqual("1/4", f3.ToString());
         }
 
         [TestMethod]
@@ -63,7 +67,15 @@ namespace FractionText
 
             Fraction f3 = f1 / f2;
 
-            Assert.AreEqual("4/2", f3.ToString());
+            Assert.AreEqual("2/1", f3.ToString());
+        }
+
+        [TestMethod]
+        public void TextGetDectimalValue()
+        {
+            Fraction f = new Fraction(0.7);
+
+            Assert.AreEqual(0.7, f.GetDecimalValue());
         }
 
 
