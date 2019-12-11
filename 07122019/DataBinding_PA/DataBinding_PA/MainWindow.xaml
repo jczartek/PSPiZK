@@ -1,0 +1,15 @@
+﻿<Window x:Class="DataBinding_PA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding_PA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="label" Content="{Binding data}" HorizontalAlignment="Left" Margin="340,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.456,0.481" Height="40" Width="109"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="33" Margin="283,244,0,0" TextWrapping="Wrap" Text="{Binding data, Mode= TwoWay}" VerticalAlignment="Top" Width="217"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="355,303,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>
