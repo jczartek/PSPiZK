@@ -1,0 +1,121 @@
+﻿<Window x:Class="Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clock"
+        xmlns:vm="clr-namespace:Clock.ViewModel"
+        mc:Ignorable="d"
+        Title="Clock" Height="550" Width="500" ResizeMode="NoResize">
+    <Window.DataContext>
+        <vm:Clock />
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Calibre" />
+        </Style>
+        <Style TargetType="Line">
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="StrokeThickness" Value="4" />
+            <Setter Property="X1" Value="200" />
+            <Setter Property="X2" Value="200" />
+            <Setter Property="Y1" Value="0" />
+            <Setter Property="Y2" Value="15" />
+        </Style>
+        <local:ConverterAngleHand x:Key="handSecond" Hands="Second" />
+        <local:ConverterAngleHand x:Key="handMinute" Hands="Minute" />
+        <local:ConverterAngleHand x:Key="handHour"   Hands="Hour" />
+    </Window.Resources>
+    <StackPanel>
+        <TextBlock  FontSize="30" Text="{Binding CurrentTime, Mode=OneWay, 
+           StringFormat={}{0:dd MMMM yyyy}, ConverterCulture=pl-PL }" />
+        <TextBlock FontSize="40" Text="{Binding CurrentTime, Mode=OneWay,
+           StringFormat={}{0:hh:mm:ss}, ConverterCulture=pl-PL}" />
+
+        <Canvas Width="400" Height="400" HorizontalAlignment="Center">
+            <Ellipse Width="400" Height="400" Stroke="Black" StrokeThickness="2" />
+            <Line />
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="30" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="60" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="90" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="120" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="150" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="180" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="210" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="240" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="270" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="300" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+
+            <Line>
+                <Line.RenderTransform>
+                    <RotateTransform Angle="330" CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+            
+            <Ellipse Canvas.Left="190" Canvas.Top="190" Height="20" Width="20" 
+                     Fill="Black" Stroke="Black"/>
+
+            <Line X1="200" Y1="60" X2="200" Y2="200">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource handHour}}" 
+                                     CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+
+            <Line X1="200" Y1="30" X2="200" Y2="200">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource handMinute}}" 
+                                     CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+
+            <Line X1="200" Y1="0" X2="200" Y2="200" StrokeThickness="2">
+                <Line.RenderTransform>
+                    <RotateTransform Angle="{Binding CurrentTime, Mode=OneWay, Converter={StaticResource handSecond}}" 
+                                     CenterX="200" CenterY="200" />
+                </Line.RenderTransform>
+            </Line>
+        </Canvas>
+    </StackPanel>
+</Window>
