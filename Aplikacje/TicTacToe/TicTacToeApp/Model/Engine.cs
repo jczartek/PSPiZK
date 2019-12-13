@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicTacToe
+namespace Model.TicTacToe
 {
     public class Engine : INotifyPropertyChanged
     {
@@ -37,7 +37,7 @@ namespace TicTacToe
             }
         }
 
-        private string turn = new Random().Next(2) == 1 ? "X" : "0";
+        private string turn = new Random().Next(2) == 1 ? "X" : "O";
         public string Turn
         {
             get
@@ -67,7 +67,9 @@ namespace TicTacToe
                     throw new Exception("Game is over. You can't set any fields!");
       
                 table[row, column] = value;
+                
                 Check();
+                Turn = Turn == "X" ? "O" : "X";
             }
         }
 
@@ -78,7 +80,7 @@ namespace TicTacToe
                     table[i,j] = default(char);
             IsFinished = false;
             Winer = "";
-            Turn = new Random().Next(1) == 1 ? "X" : "0";
+            Turn = new Random().Next(2) == 1 ? "X" : "O";
         }
 
         public void Check()

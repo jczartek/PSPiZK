@@ -59,9 +59,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TicTacToeLib\TicTacToeLib.csproj">
-      <Project>{23917359-79cc-4a33-8834-add79e426e4e}</Project>
-      <Name>TicTacToeLib</Name>
+    <ProjectReference Include="..\TicTacToeApp\TicTacToeApp.csproj">
+      <Project>{0c5dcee2-aabc-4656-a7dd-b9fd000c570e}</Project>
+      <Name>TicTacToeApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

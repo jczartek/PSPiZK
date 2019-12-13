@@ -1,5 +1,5 @@
 ﻿using System;
-using TicTacToe;
+using Model.TicTacToe;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TicTacToeTest

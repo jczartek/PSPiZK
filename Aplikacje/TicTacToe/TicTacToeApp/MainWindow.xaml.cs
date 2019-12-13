@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
+using Model.TicTacToe;
 
 namespace TicTacToe
 {
@@ -11,13 +12,12 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string Sign { get; set; } = "X";
         public Engine EngineGame { get; }
         public MainWindow()
         {
-            EngineGame = new Engine();
+            
             InitializeComponent();
-            this.DataContext = this;
+            EngineGame = (Engine)DataContext;
 
         }
 
@@ -32,10 +32,10 @@ namespace TicTacToe
             if (item.Content == null)
             {
 
-                item.Content = Sign;
+                item.Content = EngineGame.Turn;
                 try
                 {
-                    EngineGame[row, column] = char.Parse(Sign);
+                    EngineGame[row, column] = char.Parse(EngineGame.Turn);
 
                     if (EngineGame.IsFinished)
                         MessageBox.Show($"Gra skończona! Wygrał: {EngineGame.Winer}");
@@ -45,11 +45,6 @@ namespace TicTacToe
                     MessageBox.Show(exc.Message);
                 }
 
-
-                Sign = Sign == "X" ? "O" : "X";
-                runTurn.GetBindingExpression(Run.TextProperty).UpdateTarget();
-
-
             }
         }
 
@@ -58,9 +53,7 @@ namespace TicTacToe
             foreach (Label item in gridMain.Children)
                 item.Content = null;
 
-            Sign = "X";
             EngineGame.Reset();
-            runTurn.GetBindingExpression(Run.TextProperty).UpdateTarget();
         }
     }
 }

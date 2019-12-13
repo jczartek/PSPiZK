@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
+        xmlns:model="clr-namespace:Model.TicTacToe"
         mc:Ignorable="d"
         Title="Kółko i Krzyżyk" Height="500" Width="600" ResizeMode="NoResize">
     <Window.Resources>
@@ -14,10 +15,13 @@
             <Setter Property="HorizontalContentAlignment" Value="Center" />
         </Style>
     </Window.Resources>
+    <Window.DataContext>
+        <model:Engine />
+    </Window.DataContext>
     <StackPanel Margin="10" VerticalAlignment="Top">
         <TextBlock Height="30" FontSize="14" HorizontalAlignment="Center">
             <Bold>Kolej:
-                <Run Name="runTurn" Text="{Binding Sign, UpdateSourceTrigger=PropertyChanged}" />
+                <Run Name="runTurn" Text="{Binding Turn}" />
             </Bold>
         </TextBlock>
         <Grid Name="gridMain" HorizontalAlignment="Center" ShowGridLines="True"
