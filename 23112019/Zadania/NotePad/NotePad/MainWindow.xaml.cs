@@ -89,36 +89,6 @@ namespace NotePad
             textBuffer.TextWrapping = (sender as MenuItem).IsChecked ? TextWrapping.Wrap : TextWrapping.NoWrap;
         }
 
-        private void miUndo_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.Undo();
-        }
-
-        private void miCut_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.Cut();
-        }
-
-        private void miCopy_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.Copy();
-        }
-
-        private void mi_Paste_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.Paste();
-        }
-
-        private void mi_Delete_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.SelectedText = "";
-        }
-
-        private void mi_SelectAll_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.SelectAll();
-        }
-
         private void mi_PasteDate_Click(object sender, RoutedEventArgs e)
         {
             textBuffer.SelectedText = DateTime.Now.ToString();
@@ -207,9 +177,6 @@ namespace NotePad
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Delete)
-                mi_Delete_Click(null, null);
-
             if (e.Key == Key.F5)
                 mi_PasteDate_Click(null, null);
 
@@ -228,21 +195,6 @@ namespace NotePad
                         break;
                     case Key.P:
                         mi_Print_Click(null, null);
-                        break;
-                    case Key.Z:
-                        miUndo_Click(null, null);
-                        break;
-                    case Key.X:
-                        miCut_Click(null, null);
-                        break;
-                    case Key.C:
-                        miCopy_Click(null, null);
-                        break;
-                    case Key.V:
-                        mi_Paste_Click(null, null);
-                        break;
-                    case Key.A:
-                        mi_SelectAll_Click(null, null);
                         break;
                 }
             }

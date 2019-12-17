@@ -21,26 +21,34 @@
                 <Separator />
                 <MenuItem Header="Print" InputGestureText="Ctrl+P"
                           Click="mi_Print_Click" />
-                <MenuItem Header="Exit" Click="miClose_Click"/>
+                <MenuItem Header="Exit" Click="miClose_Click" />
 
             </MenuItem>
             
             <MenuItem Header="_Edit">
-                <MenuItem Header="Undo" InputGestureText="Ctrl+Z"
-                          IsEnabled="{Binding ElementName=textBuffer, Path=CanUndo}"
-                          Click="miUndo_Click" />
+                <MenuItem Header="Undo" 
+                          Command="ApplicationCommands.Undo"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
+                <MenuItem Header="Redo" InputGestureText="Ctrl+Shift+Z"
+                          Command="ApplicationCommands.Redo"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <Separator />
                 <MenuItem Header="Cut" InputGestureText="Ctrl+X"
-                          Click="miCut_Click"/>
+                          Command="ApplicationCommands.Cut"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <MenuItem Header="Copy" InputGestureText="Ctrl+C"
-                          Click="miCopy_Click" />
+                          Command="ApplicationCommands.Copy"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <MenuItem Header="Paste" InputGestureText="Ctrl+V"
-                          Click="mi_Paste_Click"/>
+                          Command="ApplicationCommands.Paste"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <MenuItem Header="Delete" InputGestureText="Del"
-                          Click="mi_Delete_Click"/>
+                          Command="ApplicationCommands.Delete"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <Separator />
                 <MenuItem Header="Select All" InputGestureText="Ctrl+A"
-                          Click="mi_SelectAll_Click"/>
+                          Command="ApplicationCommands.SelectAll"
+                          CommandTarget="{Binding ElementName=textBuffer}"/>
                 <MenuItem Header="Time/Date" InputGestureText="F5"
                           Click="mi_PasteDate_Click"/>
             </MenuItem>
