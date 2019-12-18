@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotePad"
+        xmlns:converters="clr-namespace:NotePad.Converters"
         mc:Ignorable="d"
         Title="Notepad" Height="450" Width="800"
         Closing="Window_Closing" PreviewKeyDown="Window_PreviewKeyDown">
+    <Window.Resources>
+        <converters:BoolToWrapConverter x:Key="boolToWrap" />
+        <converters:BoolToVisibilityConverter x:Key="boolToVisibility" />
+    </Window.Resources>
     <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBuffer}">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
@@ -54,13 +59,11 @@
             </MenuItem>
 
             <MenuItem Header="Format">
-                <MenuItem Name="miWrap"  Header="Wrap" IsCheckable="True" IsChecked="False"
-                          Click="miWrap_Click"/>
+                <MenuItem Name="miWrap"  Header="Wrap" IsCheckable="True" IsChecked="True"/>
             </MenuItem>
 
             <MenuItem Header="View">
-                <MenuItem Header="Status Bar" IsCheckable="True" IsChecked="True"
-                          Click="miStatusBar_Click" />
+                <MenuItem Name="miVisibilityStatusBar" Header="Status Bar" IsCheckable="True" IsChecked="True"/>
             </MenuItem>
 
             <MenuItem Header="Help">
@@ -70,11 +73,15 @@
         
         <ToolBarTray DockPanel.Dock="Top"></ToolBarTray>
         
-        <StatusBar Name="statusBar" DockPanel.Dock="Bottom" >
+        <StatusBar Name="statusBar" DockPanel.Dock="Bottom"
+                   Visibility="{Binding ElementName=miVisibilityStatusBar, 
+                                        Path=IsChecked, Mode=TwoWay,
+                                        Converter={StaticResource boolToVisibility}}">
             <StatusBarItem Name="pathStatusItem">[None]</StatusBarItem>
         </StatusBar>
 
-        <TextBox Name="textBuffer" AcceptsReturn="True" TextWrapping="NoWrap"
+        <TextBox Name="textBuffer" AcceptsReturn="True" 
+                 TextWrapping="{Binding ElementName=miWrap, Path=IsChecked, Converter={StaticResource boolToWrap}}"
                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
                  TextChanged="textBuffer_TextChanged" />

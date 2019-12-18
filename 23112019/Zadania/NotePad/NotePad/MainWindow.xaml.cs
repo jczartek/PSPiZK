@@ -1,19 +1,9 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace NotePad
 {
@@ -84,11 +74,6 @@ namespace NotePad
             }
         }
 
-        private void miWrap_Click(object sender, RoutedEventArgs e)
-        {
-            textBuffer.TextWrapping = (sender as MenuItem).IsChecked ? TextWrapping.Wrap : TextWrapping.NoWrap;
-        }
-
         private void mi_PasteDate_Click(object sender, RoutedEventArgs e)
         {
             textBuffer.SelectedText = DateTime.Now.ToString();
@@ -104,11 +89,6 @@ namespace NotePad
         private void deleteAsterisk()
         {
             if (Title.StartsWith("* ")) Title = Title.Substring(2);
-        }
-
-        private void miStatusBar_Click(object sender, RoutedEventArgs e)
-        {
-            statusBar.Visibility = (sender as MenuItem).IsChecked ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void miSaveAs_Click(object sender, RoutedEventArgs e)
