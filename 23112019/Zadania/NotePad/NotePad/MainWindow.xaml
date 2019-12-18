@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Notepad" Height="450" Width="800"
         Closing="Window_Closing" PreviewKeyDown="Window_PreviewKeyDown">
-    <DockPanel>
+    <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBuffer}">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="New" InputGestureText="Ctrl+N" 
