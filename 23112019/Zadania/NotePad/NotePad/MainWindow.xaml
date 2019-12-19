@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotePad"
         xmlns:converters="clr-namespace:NotePad.Converters"
+        xmlns:vm="clr-namespace:NotePad.ViewModel"
         mc:Ignorable="d"
         Title="Notepad" Height="450" Width="800"
         Closing="Window_Closing" PreviewKeyDown="Window_PreviewKeyDown">
     <Window.Resources>
         <converters:BoolToWrapConverter x:Key="boolToWrap" />
         <converters:BoolToVisibilityConverter x:Key="boolToVisibility" />
+        <vm:Editor x:Key="viewModelEditor" />
     </Window.Resources>
-    <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBuffer}">
+    <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBuffer}"
+               DataContext="{StaticResource viewModelEditor}">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="New" InputGestureText="Ctrl+N" 
@@ -77,10 +80,13 @@
                    Visibility="{Binding ElementName=miVisibilityStatusBar, 
                                         Path=IsChecked, Mode=TwoWay,
                                         Converter={StaticResource boolToVisibility}}">
-            <StatusBarItem Name="pathStatusItem">[None]</StatusBarItem>
+            <StatusBarItem Name="pathStatusItem">
+                <TextBlock Name="statusBarText" Text="{Binding PathFile, Mode=OneWay}" />
+            </StatusBarItem>
         </StatusBar>
 
-        <TextBox Name="textBuffer" AcceptsReturn="True" 
+        <TextBox Name="textBuffer" AcceptsReturn="True"
+                 Text="{Binding Content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  TextWrapping="{Binding ElementName=miWrap, Path=IsChecked, Converter={StaticResource boolToWrap}}"
                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
                  ScrollViewer.VerticalScrollBarVisibility="Auto" 
