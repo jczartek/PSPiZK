@@ -173,16 +173,8 @@ namespace NotePad
                     case Key.S:
                         miSaveAs_Click(null, null);
                         break;
-                    case Key.P:
-                        mi_Print_Click(null, null);
-                        break;
                 }
             }
-        }
-
-        private void mi_Print_Click(object sender, RoutedEventArgs e)
-        {
-            Printing.PrintText(textBuffer.Text);
         }
     }
 }

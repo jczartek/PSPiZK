@@ -23,6 +23,10 @@ namespace NotePad.Model
             }
         }
 
+        public bool IsEmpty()
+        {
+            return sbuilder.Length > 0 ? false : true;
+        }
 
         public void Clear()
         {

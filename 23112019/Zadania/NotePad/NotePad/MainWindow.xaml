@@ -16,6 +16,9 @@
     </Window.Resources>
     <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBuffer}"
                DataContext="{StaticResource viewModelEditor}">
+        <DockPanel.InputBindings>
+            <KeyBinding Key="P" Modifiers="Ctrl" Command="{Binding Print}" />
+        </DockPanel.InputBindings>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="New" InputGestureText="Ctrl+N" 
@@ -28,7 +31,7 @@
                           Click="miSaveAs_Click" />
                 <Separator />
                 <MenuItem Header="Print" InputGestureText="Ctrl+P"
-                          Click="mi_Print_Click" />
+                          Command="{Binding Print}"/>
                 <MenuItem Header="Exit" Click="miClose_Click" />
 
             </MenuItem>
